@@ -1,0 +1,8 @@
+{
+	"name": "2",
+	"version": "0.0.1",
+	"author": "",
+	"scripts": {
+		"start": "node script.js"
+	}
+}
