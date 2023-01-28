@@ -1,0 +1,51 @@
+body {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	overflow: hidden;
+}
+.block__el {
+	display: none;
+	width: 150px;
+	height: 150px;
+	background-color: rgb(150, 38, 38);
+	position: relative;
+	top: 20px;
+	left: 200px;
+	animation: background 3s infinite alternate;
+}
+@keyframes background {
+	50% {
+		background: skyblue;
+		box-shadow: 0 -200px 100px -100px yellowgreen inset;
+	}
+}
+.wrapper {
+	width: 100%;
+	margin: 0px auto;
+}
+.section {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.right {
+	position: absolute;
+	right: 100px;
+	top: 270px;
+}
+.btn {
+	background-color: rgb(2, 153, 40);
+	color: #ffffff;
+	width: 100px;
+	height: 50px;
+	border-radius: 3px;
+	border: none;
+	cursor: pointer;
+}
+.btn:hover {
+	background: rgba(0,0,0,0);
+	color: #a7139a;
+	box-shadow: inset 0 0 0 3px #611261;
+}
+

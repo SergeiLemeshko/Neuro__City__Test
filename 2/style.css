@@ -1,0 +1,172 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+html,body{
+	height: 100%;
+}
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.figure {
+	padding: 50px;
+	max-width: 1170px;
+	margin: 0px auto;
+}
+.figure__item {
+	margin: 0px 0px 30px 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Стили фигур*/
+
+/* Треугольник*/
+.triangle {
+	width: 0px;
+	height: 0px;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid #000;
+}
+@keyframes rotate {
+	100% {
+	  transform: rotateY(-360deg);
+	}
+ }
+.triangle.animation-1 {
+	animation: 1600ms rotate infinite alternate ease-in-out;
+ }
+
+/* Прямоугольник*/
+.rectangle {
+	width: 200px;
+	height: 150px;
+	background-color: blue;
+}
+@keyframes rectangle {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+	50% {
+		transform: scale3d(0.95, 0.95, 0.95);
+	}
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
+.rectangle.animation-2 {
+	background: #E41931;
+	border-radius: 20px;
+	animation: rectangle 2s infinite;
+}
+/* Круг*/
+.circle {
+	width: 150px;
+	height: 150px;
+	background-color: blue;
+	border-radius: 50%;
+}
+@keyframes circle {
+	0% {
+	left: 0;
+	}
+	50% {
+		border-radius: 0%;
+	}
+	100% {
+		left: 0px;
+	}
+}
+.circle.animation-3 {
+	animation: circle 2s linear infinite alternate 0s forwards;
+}
+/* Овал*/
+.oval {
+	width: 250px;
+	height: 150px;
+	background-color: blue;
+	border-radius: 50%;
+}
+.oval.animation-4 {
+	animation: moving 3s infinite linear;
+	transform-origin: -20px -20px;
+}
+@keyframes moving {
+	100% {transform: rotate(-360deg);}
+}
+/* Квадрат*/
+.square {
+	width: 150px;
+	height: 150px;
+	background-color: blue;
+}
+.square.animation-5 {
+	animation: 2s blinker infinite cubic-bezier(1.0,0,0,1.0) 2s;
+}
+@keyframes blinker {
+	from { opacity: 1.0; }
+	to { opacity: 0.0; }
+}
+/* Параллелограмм*/
+.parallelogram {
+	width: 200px;
+	height: 150px;
+	background-color: blue;
+	transform: skew(-20deg);
+}
+.parallelogram.animation-6 {
+	animation: change-background 3s linear infinite;
+}
+@keyframes change-background {
+	0% {
+	background: #69b7eb;
+	}
+	50% {
+	background: #b3dbd3;
+	}
+	100% {
+	background: #f4d6db;
+	}
+}
+/* Трапеция*/
+.trapezoid {
+	width: 200px;
+	border-bottom: 100px solid #000;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+}
+.trapezoid.animation-7 {
+   animation: swing 1s ease;
+   animation-iteration-count: 1;
+}
+@keyframes swing {
+   15% {
+		-webkit-transform: translateX(5px);
+		transform: translateX(5px);
+	}
+   30% {
+		-webkit-transform: translateX(-5px);
+		transform: translateX(-5px);
+   }
+   50% {
+		-webkit-transform: translateX(3px);
+		transform: translateX(3px);
+   }
+   65% {
+		-webkit-transform: translateX(-3px);
+		transform: translateX(-3px);
+   }
+   80% {
+		-webkit-transform: translateX(2px);
+		transform: translateX(2px);
+   }
+   100% {
+   -webkit-transform: translateX(0);
+   transform: translateX(0);
+   }
+}
